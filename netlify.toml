@@ -11,7 +11,7 @@
 # Production context: All deploys to the main
 # repository branch will inherit these settings.
 [context.production]
-  command = "make production"
+  command = "hugo -d Latest"
 [context.production.environment]
     HUGO_VERSION = "0.27.1"
 
@@ -24,7 +24,7 @@
 # Branch Deploy context: All deploys that are not in
 # an active Deploy Preview will inherit these settings.
 [context.branch-deploy]
-  command = "make staging"
+  command = "hugo -d Staging"
 
   [context.branch-deploy.environment]
     HUGO_VERSION = "0.27.1"
@@ -33,4 +33,4 @@
 # will take these settings and override their
 # current ones.
 [context.v1.0]
-  command = "make feature"
+  command = "hugo -d v1.0"
