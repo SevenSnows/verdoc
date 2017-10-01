@@ -4,8 +4,8 @@
 # “command” is your build command.
 
 [build]
-  base    = "verdoc"
-  publish = "public"
+  base    = ""
+  publish = "Latest"
   command = "hugo -d Latest"
 
 # Production context: All deploys to the main
