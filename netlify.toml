@@ -1,0 +1,36 @@
+# Global settings applied to the whole site.  
+# “base” is directory to change to before starting build, and
+# “public” is the directory to publish (relative to root of your repo).
+# “command” is your build command.
+
+[build]
+  base    = "verdoc"
+  publish = "public"
+  command = "hugo -d Latest"
+
+# Production context: All deploys to the main
+# repository branch will inherit these settings.
+[context.production]
+  command = "make production"
+[context.production.environment]
+    HUGO_VERSION = "0.27.1"
+
+# Deploy Preview context: All Deploy Previews
+# will inherit these settings.
+
+[context.deploy-preview.environment]
+    HUGO_VERSION = "0.27.1"
+
+# Branch Deploy context: All deploys that are not in
+# an active Deploy Preview will inherit these settings.
+[context.branch-deploy]
+  command = "make staging"
+
+  [context.branch-deploy.environment]
+    HUGO_VERSION = "0.27.1"
+  
+# Specific branch context: Deploys from this branch
+# will take these settings and override their
+# current ones.
+[context.v1.0]
+  command = "make feature"
