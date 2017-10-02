@@ -3,19 +3,26 @@ var hostname = window.location.hostname;
 var path = window.location.pathname;
 if (hostname.startsWith("www.")){
 }else{
-    document.write('<div class="panel panel-danger"><div class="panel-heading">');
+    
+    
+    var fqdn = hostname;
     
     if (hostname.indexOf(".") > - 1){
-        document.write('This documentation is for version ');
+        document.write('<div class="panel panel-danger"><div class="panel-heading">');
+        document.write('This documentation is for version <strong>');
         var ver = hostname.substring(0,hostname.indexOf("."));
+        fqdn = hostname.replace(ver, "");
         document.write(ver.replace("-", "."));
-        document.write('. ');
+        document.write('</strong>. ');
         //document.write(hostname.indexOf("."));    
+        document.write('View the <a href="https://www.' + fqdn + path + '">latest version</a>');
+        document.write('</div></div>');
     }else{
-        
+    //lets ignore
     }
-    document.write('View the <a href="https://www.verdoc.co.uk' + path + '">latest version</a>');
-    document.write('</div></div>');
+    
+    
+    
 };
 
 </script>
