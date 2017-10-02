@@ -1,8 +1,19 @@
 <script>
-var loc = window.location.hostname; 
-if (loc.startsWith("www.")){
+var hostname = window.location.hostname; 
+var path = window.location.pathname;
+if (hostname.startsWith("www.")){
 }else{
-    document.write('<div class="panel panel-danger"><div class="panel-heading">This is not the latest version of documentation</div><div class="panel-body">For the latest version go to <a href="https://www.verdoc.co.uk">www.verdoc.co.uk</a></div></div>');
+    document.write('<div class="panel panel-danger"><div class="panel-heading">');
+    
+    if (hostname.indexOf(".") > - 1){
+        document.write('This documentation is for version ');
+        var ver = hostname.substring(0,hostname.indexOf("."));
+        document.write(ver);
+        document.write('.');
+        //document.write(hostname.indexOf("."));    
+    }else{
+        document.write('View the <a href="https://www.verdoc.co.uk' + path + '">latest version</a></div></div>');
+    }
 };
 
 </script>
