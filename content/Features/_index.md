@@ -11,7 +11,7 @@ VerDoc features
 
 {{% panel theme="success" header="Features" footer="" %}}
 
-* Put features here
+* Put features here; now with v1.0 update
 
 {{% /panel %}}
 
