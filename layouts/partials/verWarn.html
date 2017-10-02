@@ -8,8 +8,8 @@ if (hostname.startsWith("www.")){
     if (hostname.indexOf(".") > - 1){
         document.write('This documentation is for version ');
         var ver = hostname.substring(0,hostname.indexOf("."));
-        document.write(ver);
-        document.write('.');
+        document.write(ver.replace("-", "."));
+        document.write('. ');
         //document.write(hostname.indexOf("."));    
     }else{
         
