@@ -64,7 +64,7 @@
                 </span>
             </div>
             {{ partial "toc.html" . }}
-            {{ partial "toc.html" . }}
+            
           </div>
         {{end}}
         {{if .Params.tags }}
@@ -74,6 +74,7 @@
             {{ end }}
           </div>
         {{end}}
+        {{ partial "verWarn.html" . }}
         <div id="body-inner">
           {{if not .IsHome}}
             <h1>{{.Title}}</h1>

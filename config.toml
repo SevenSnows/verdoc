@@ -45,3 +45,7 @@ weight = 30
 [author]
   name = "Bob Smith"
   homepage = "http://Smith.com.fr/"
+  
+  [taxonomies]
+   tag = "tags"
+   category = "categories"
