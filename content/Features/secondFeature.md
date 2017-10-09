@@ -16,3 +16,5 @@ Features the 2nd Hobbit
 {{% /panel %}}
 
 Simon visited
+
+Second feature is now in v1.3
